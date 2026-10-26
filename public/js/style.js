@@ -1,28 +1,57 @@
 $(document).ready(function () {
-    $('.nav-link').on('click', function () {
-        $('.nav-link').removeClass('active');
-        $(this).addClass('active');
-    });
+    const $videoModalElement = $('#candidateVideoModal');
+    const $modalVideo = $('#candidateModalVideo');
 
-    $('.search-select').select2({
-        placeholder: 'Ընտրել քաղաքը',
-        allowClear: false,
-        width: '100%',
-        minimumResultsForSearch: 0
-    });
+    if ($videoModalElement.length && $modalVideo.length) {
+        const videoModal = new bootstrap.Modal($videoModalElement[0]);
+        const modalVideo = $modalVideo[0];
 
-    $('.hero-option').on('click', function (e) {
-        e.preventDefault();
+        $(document).on('click', '.candidate-video-card', function (e) {
+            e.preventDefault();
 
-        $('.hero-option').removeClass('active');
-        $(this).addClass('active');
+            const videoSrc = $(this).data('video');
 
-        const type = $(this).data('type');
+            if (!videoSrc) {
+                return;
+            }
 
-        if (type === 'job') {
-            $('.form-input').attr('placeholder', 'Որոնել աշխատանք (օր.՝ ծրագրավորող, հաշվապահ...)');
-        } else {
-            $('.form-input').attr('placeholder', 'Որոնել թեկնածու (անունը կամ մասնագիտությունը)');
-        }
-    });
+            modalVideo.pause();
+            modalVideo.src = videoSrc;
+            modalVideo.load();
+
+            videoModal.show();
+
+            modalVideo.play().catch(function () {});
+        });
+
+        $videoModalElement.on('hidden.bs.modal', function () {
+            modalVideo.pause();
+            modalVideo.currentTime = 0;
+            modalVideo.removeAttribute('src');
+            modalVideo.load();
+        });
+    }
+
+    if ($('.candidate-swiper').length) {
+        const candidateSwiper = new Swiper('.candidate-swiper', {
+            slidesPerView: 3,
+            spaceBetween: 16,
+            grabCursor: true,
+
+            breakpoints: {
+                576: {
+                    slidesPerView: 1,
+                    spaceBetween: 20
+                },
+                799: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+                992: {
+                    slidesPerView: 3,
+                    spaceBetween: 24
+                }
+            }
+        });
+    }
 });

@@ -14,7 +14,6 @@
     --text: #475569;
     --muted: #64748B;
 
-    --bg: #F8FAFC;
     --white: #fff9f9;
     --border: #E2E8F0;
 }
@@ -55,7 +54,7 @@ h2 {
 }
 
 h3 {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     margin: 0;
 }
@@ -288,6 +287,84 @@ header {
     min-height: 46px;
     min-width: 100px;
 }
+
+/*profession*/
+
+.profession-card {
+    background: #FFFF;
+}
+
+.profession-card {
+    background: #ffffff;
+    border: 1px solid #E2E8F0;
+    transition: all 0.3s ease;
+}
+
+.profession-card:hover {
+    background: #EFF6FF;
+    border-color: #93C5FD;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(37, 99, 235, 0.10);
+}
+
+.arrow-profession-card {
+    transition: transform 0.3s ease;
+}
+
+.profession-card:hover .arrow-profession-card {
+    transform: translateX(5px);
+}
+.profession-title,
+.profession-card-title,
+.video-title{
+    color: #201e1e;
+}
+
+.icon-profession-card {
+    font-size: 20px;
+    background: #E4F0FD;
+    color: var(--primary);
+}
+
+.profession-card-desc {
+    color: #3a424f;
+}
+
+.arrow-profession-card {
+    font-size: 14px;
+    color: var(--primary);
+}
+
+.learn-more {
+    color:var(--primary);
+    text-decoration: none;
+    position: relative;
+}
+
+.learn-more::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    height: 1px;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.learn-more:hover::after {
+    transform: scaleX(1);
+}
+
+/*video*/
+
+.candidate-video {
+    object-fit: cover;
+
+}
+
 
 /* Responsive */
 @media (max-width: 991.98px) {

@@ -18,7 +18,8 @@
                         <h1 class="hero-title font-bold">Աշխատանքը գտնում է քեզ <br><span
                                 class="hero-title-second-part pt-2 d-inline-block">երբ դու ցույց ես տալիս թե ով ես</span>
                         </h1>
-                        <p class="hero-desc font-light">Քո տաղանդը արժանի է տեսանելի լինելու։ Ներկայացրու քեզ, բացահայտիր
+                        <p class="hero-desc font-light pb-3">Քո տաղանդը արժանի է տեսանելի լինելու։ Ներկայացրու քեզ,
+                            բացահայտիր
                             հնարավորություններդ և գտիր քո աշխատանքը</p>
                     </div>
                 </div>
@@ -30,7 +31,7 @@
                                 <i class="fa-solid fa-briefcase pt-2"></i>
                                 <div>
                                     <h5 class="hero-card-find-work-title">Գտնել աշխատանք</h5>
-                                    <span class="hero-card-find-work-desc small">Ընտրիր քեզ հարմար աշխատանքը</span>
+                                    <span class="hero-card-find-work-desc small ">Ընտրիր քեզ հարմար աշխատանքը</span>
                                 </div>
                             </div>
                         </a>
@@ -90,7 +91,179 @@
         </div>
     </section>
 
-    <section class="profession">
+    <section class="profession pt-4 bg-body-tertiary">
+        <div class="container-main mx-auto">
+            <h2 class="font-bold profession-title">Մասնագիտություններ</h2>
 
+            <div class="row my-3 my-md-5 g-3">
+
+                <div class="col-12 d-flex justify-content-end order-2 order-md-0 mt-2 mt-md-0 p-3">
+                    <a href="#" class="learn-more d-inline-flex align-items-center gap-3 text-decoration-none">
+                        Տեսնել ավելին
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 order-1">
+                    <a href="#" class="text-decoration-none">
+                        <div
+                            class="profession-card d-flex align-items-center justify-content-between justify-content-sm-start gap-3 p-3 rounded-3 h-100">
+                            <div class="icon-profession-card rounded-4 flex-shrink-0">
+                                <i class="fa-solid fa-code p-3"></i>
+                            </div>
+
+                            <div class="profession-card-content flex-grow-1">
+                                <h3 class="profession-card-title">ՏՏ և ծրագրավորում</h3>
+                                <p class="profession-card-desc pt-2">Թեկնածուներ և աշխատանքներ</p>
+                            </div>
+
+                            <span class="arrow-profession-card flex-shrink-0">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 order-1">
+                    <a href="#" class="text-decoration-none">
+                        <div
+                            class="profession-card d-flex align-items-center justify-content-between justify-content-sm-start gap-3 p-3 rounded-3 h-100">
+                            <div class="icon-profession-card rounded-4 flex-shrink-0">
+                                <i class="fa-solid fa-bullhorn p-3"></i>
+                            </div>
+
+                            <div class="profession-card-content flex-grow-1">
+                                <h3 class="profession-card-title">Մարքեթինգ</h3>
+                                <p class="profession-card-desc pt-2">Թեկնածուներ և աշխատանքներ</p>
+                            </div>
+
+                            <span class="arrow-profession-card flex-shrink-0">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 order-1">
+                    <a href="#" class="text-decoration-none">
+                        <div
+                            class="profession-card d-flex align-items-center justify-content-between justify-content-sm-start gap-3 p-3 rounded-3 h-100">
+                            <div class="icon-profession-card rounded-4 flex-shrink-0">
+                                <i class="fa-solid fa-bullhorn p-3"></i>
+                            </div>
+
+                            <div class="profession-card-content flex-grow-1">
+                                <h3 class="profession-card-title">Մարքեթինգ</h3>
+                                <p class="profession-card-desc pt-2">Թեկնածուներ և աշխատանքներ</p>
+                            </div>
+
+                            <span class="arrow-profession-card flex-shrink-0">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
     </section>
-@endsection
+
+
+    <section class="videos">
+        <div class="container-main mx-auto">
+            <div class="videos-header d-flex align-items-end justify-content-between">
+                <div>
+                    <span class="videos-label">WORKARMENIA</span>
+                    <h2 class="video-title">Բացահայտի՛ր տաղանդներին</h2>
+                    <p class="videos-description">
+                        Ծանոթացի՛ր մասնագետների հետ նրանց վիդեո CV-ների միջոցով։
+                    </p>
+                </div>
+
+                <a href="#" class="videos-all d-none d-md-inline-flex">
+                    Բոլոր տեսանյութերը
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="swiper candidate-swiper">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <a href="#" class="candidate-video-card" data-video="{{ asset('videos/card.mp4') }}">
+                            <div class="candidate-video">
+                                <video preload="metadata" muted playsinline>
+                                    <source src="{{ asset('videos/card.mp4') }}" type="video/mp4">
+                                </video>
+
+                                <span class="candidate-play">
+                                <i class="fa-solid fa-play"></i>
+                            </span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="#" class="candidate-video-card" data-video="{{ asset('videos/card.mp4') }}">
+                            <div class="candidate-video">
+                                <video preload="metadata" muted playsinline>
+                                    <source src="{{ asset('videos/card.mp4') }}" type="video/mp4">
+                                </video>
+
+                                <span class="candidate-play">
+                                <i class="fa-solid fa-play"></i>
+                            </span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="#" class="candidate-video-card" data-video="{{ asset('videos/card.mp4') }}">
+                            <div class="candidate-video">
+                                <video preload="metadata" muted playsinline>
+                                    <source src="{{ asset('videos/card.mp4') }}" type="video/mp4">
+                                </video>
+
+                                <span class="candidate-play">
+                                <i class="fa-solid fa-play"></i>
+                            </span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="#" class="candidate-video-card" data-video="{{ asset('videos/card.mp4') }}">
+                            <div class="candidate-video">
+                                <video preload="metadata" muted playsinline>
+                                    <source src="{{ asset('videos/card.mp4') }}" type="video/mp4">
+                                </video>
+
+                                <span class="candidate-play">
+                                <i class="fa-solid fa-play"></i>
+                            </span>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <a href="#" class="videos-all-mobile">
+                Բոլոր տեսանյութերը
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="modal fade" id="candidateVideoModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content video-modal-content">
+                    <button type="button" class="video-modal-close" data-bs-dismiss="modal" aria-label="Փակել">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+
+                    <video id="candidateModalVideo" controls playsinline></video>
+                </div>
+            </div>
+        </div>
+    </section>
+    @endsection
